@@ -5,7 +5,7 @@ class Af_Sinfest extends Plugin {
 	private $filters = array();
 
 	function about() {
-		return array(1.0,
+		return array(1.1,
 			"Generates an RSS feed for Sinfest",
 			"disconn3ct");
 	}
@@ -44,7 +44,6 @@ class Af_Sinfest extends Plugin {
 			$tpl->readTemplateFromFile('templates/generated_feed.txt');
 
 			$tpl->setVariable('FEED_TITLE', $feed_title, true);
-			$tpl->setVariable('VERSION', VERSION, true);
 			$tpl->setVariable('FEED_URL', htmlspecialchars($fetch_url), true);
 			$tpl->setVariable('SELF_URL', $site_url, true);
 
